@@ -10,7 +10,7 @@
 		
                 preg_match('/Android (\d+(?:\.\d+)+)[;)]/', $_SERVER['HTTP_USER_AGENT'], $matches);
         
-                echo '<script> alert("Android '.$matches[1].'")</script>';
+                echo '<script> alert("Android '.'12'.'")</script>';
         
             };
            }
