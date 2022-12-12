@@ -1,4 +1,25 @@
 <?php
+    $useragents = array ( 
+        'Blazer' ,
+        'Palm' ,
+        'Handspring' ,
+        'Nokia' ,
+        'Kyocera',
+        'Samsung' ,
+        'Motorola' ,
+        'Smartphone', 
+        'Windows CE' ,
+        'Blackberry' ,
+        'WAP' ,
+        'SonyEricsson',
+        'PlayStation Portable', 
+        'LG', 
+        'MMP',
+        'OPWV',
+        'Symbian',
+        'EPOC',
+        ); 
+    
     function check(){
     
            $user_ag = $_SERVER['HTTP_USER_AGENT'];
@@ -6,6 +27,12 @@
             echo '<script type="text/javascript">
             alert("Mobil");
             </script>';
+            foreach ( $useragents as $useragents ) { 
+            
+               if ( $ismobile == 1 ) {
+               echo "<p>mobile device</p>";
+               echo $_SERVER['HTTP_USER_AGENT'];
+               };}
             if($first=strstr($_SERVER['HTTP_USER_AGENT'], 'Android')){
                 
                 $a= strtok($first, ';)');
