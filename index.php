@@ -20,6 +20,7 @@
             'MMP',
             'OPWV',
             'Symbian',
+            'SM',
             'EPOC',
             ); 
            $user_ag = $_SERVER['HTTP_USER_AGENT'];
@@ -29,7 +30,13 @@
             echo $user_ag."<br>";
             foreach ( $useragents as $useragents ) { 
                 if(strstr($user_ag,$useragents)) {
-                  echo $useragents;
+                  if($useragents=='SM'){
+                    echo "Samsung"."<br>";
+                    
+                  }
+                  else {
+                    echo $useragents."<br>"; 
+                  };
                 };
                }
             
