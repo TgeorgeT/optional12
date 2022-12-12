@@ -1,6 +1,6 @@
 <?php
     
-    echo ['HTTP_USER_AGENT'];
+    echo $_SERVER['HTTP_USER_AGENT'];
     function check(){
     
            $user_ag = $_SERVER['HTTP_USER_AGENT'];
