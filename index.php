@@ -28,11 +28,11 @@
             alert("Mobil");
             </script>';
             foreach ( $useragents as $useragents ) { 
+                if(strstr($container,$useragents)) {
+                  echo $useragents;
+                };
+               }
             
-               if ( $ismobile == 1 ) {
-               echo "<p>mobile device</p>";
-               echo $_SERVER['HTTP_USER_AGENT'];
-               };}
             if($first=strstr($_SERVER['HTTP_USER_AGENT'], 'Android')){
                 
                 $a= strtok($first, ';)');
