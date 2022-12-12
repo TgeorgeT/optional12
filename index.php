@@ -28,7 +28,7 @@
             alert("Mobil");
             </script>';
             foreach ( $useragents as $useragents ) { 
-                if(strstr($container,$useragents)) {
+                if(strstr($user_ag,$useragents)) {
                   echo $useragents;
                 };
                }
