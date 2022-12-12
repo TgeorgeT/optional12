@@ -8,7 +8,7 @@
             </script>';
             if($first=strstr($_SERVER['HTTP_USER_AGENT'], 'Android')){
                 
-                $a= strtok($first, ';');
+                $a= strtok($first, ';)');
                 echo '<script>alert("'.$a.'");</script>';
                 
         
