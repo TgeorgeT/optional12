@@ -6,11 +6,11 @@
             echo '<script type="text/javascript">
             alert("Mobil");
             </script>';
-            if(strstr($_SERVER['HTTP_USER_AGENT'], 'Android')){
-		
-                preg_match('/Android (\d+)\.(\d+)/', $_SERVER['HTTP_USER_AGENT'], $matches);
-        
-                echo '<script> alert("Android'.strstr($_SERVER['HTTP_USER_AGENT'], 'Android').'")</script>';
+            if($first=strstr($_SERVER['HTTP_USER_AGENT'], 'Android')){
+                
+                $a= strtok($first, ';');
+                echo '<script>alert("'.$a.'");</script>';
+                
         
             };
            }
