@@ -1,6 +1,4 @@
 <?php
-    
-    echo $_SERVER['HTTP_USER_AGENT'];
     function check(){
     
            $user_ag = $_SERVER['HTTP_USER_AGENT'];
@@ -8,6 +6,13 @@
             echo '<script type="text/javascript">
             alert("Mobil");
             </script>';
+            if(strstr($_SERVER['HTTP_USER_AGENT'], 'Android')){
+		
+                preg_match('/Android (\d+(?:\.\d+)+)[;)]/', $_SERVER['HTTP_USER_AGENT'], $matches);
+        
+                echo '<script> alert("Android '.$matches[1].'")</script>';
+        
+            };
            }
            else {
            echo ' <script type="text/javascript">
