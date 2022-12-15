@@ -24,27 +24,35 @@
             'EPOC',
             ); 
            $user_ag = $_SERVER['HTTP_USER_AGENT'];
-            echo $user_ag;
            if(preg_match('/(Mobile|Android|Tablet|GoBrowser|[0-9]x[0-9]*|uZardWeb\/|Mini|Doris\/|Skyfire\/|iPhone|Fennec\/|Maemo|Iris\/|CLDC\-|Mobi\/)/uis',$user_ag)){
             echo '<h4>';
             echo "Mobil<br>";
-            foreach ( $useragents as $useragents ) { 
-                if(strstr($user_ag,$useragents)) {
-                  if($useragents=='SM'){
-                    echo "Samsung"."<br>";
-                    
-                  }
-                  else {
-                    echo $useragents."<br>"; 
-                  };
-                };
-               }
             
-            if($first=strstr($_SERVER['HTTP_USER_AGENT'], 'Android')){
+            if($first=strstr( $user_ag, 'Android')){
                 
+                foreach ( $useragents as $useragents ) { 
+                    if(strstr($user_ag,$useragents)) {
+                      if($useragents=='SM'){
+                        echo "Samsung"."<br>";
+                        
+                      }
+                      else {
+                        echo $useragents."<br>"; 
+                      };
+                    };
+                   }
+
                 $a= strtok($first, ';)');
                 echo $a;
 
+            }
+            else if($first=strstr( $user_ag, 'iPhone')){
+                echo "Iphone<br>";
+                echo "iOS<br>";
+                $a= strstr($first,'OS');
+                $a= substr($a, 3);
+                $a= strtok(' ');
+                echo $a.'<br>';
             };
            }
            else {
