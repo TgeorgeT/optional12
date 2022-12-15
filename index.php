@@ -24,6 +24,7 @@
             'EPOC',
             ); 
            $user_ag = $_SERVER['HTTP_USER_AGENT'];
+            echo $user_ag;
            if(preg_match('/(Mobile|Android|Tablet|GoBrowser|[0-9]x[0-9]*|uZardWeb\/|Mini|Doris\/|Skyfire\/|iPhone|Fennec\/|Maemo|Iris\/|CLDC\-|Mobi\/)/uis',$user_ag)){
             echo '<h4>';
             echo "Mobil<br>";
