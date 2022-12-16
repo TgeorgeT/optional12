@@ -15,7 +15,6 @@
             'Blackberry' ,
             'WAP' ,
             'SonyEricsson',
-            'PlayStation Portable', 
             'LG', 
             'MMP',
             'OPWV',
